@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Music, MapPin, Cpu, Sparkles, Users, Star, ArrowRight, Headphones, Plane, Smartphone } from "lucide-react"
@@ -14,6 +14,7 @@ import { DebugChatbot } from "@/components/debug-chatbot"
 import { NewsletterSection } from "@/components/newsletter-section"
 import { Footer } from "./footer"
 import { Header } from "./header"
+import { Button } from "./ui/button"
 
 export function ClientPageWrapper() {
   const { language } = useLanguage()
@@ -343,7 +344,8 @@ export function ClientPageWrapper() {
     target="_blank"
     rel="noopener noreferrer"
   >
-    <Button className="w-16 h-16 rounded-full bg-[#25D366] hover:bg-[#1DA851] shadow-2xl hover:shadow-3xl transition-all duration-300 animate-pulse hover:scale-110 group">
+    <Button className="w-16 h-16 rounded-full bg-gradient-to-r from-[#369b5e] via-[#50f205] shadow-2xl animate-pulse relative">
+
       <Whatsapp className="h-8 w-8 text-white drop-shadow-lg group-hover:scale-110 transition-transform" />
     </Button>
   </Link>
