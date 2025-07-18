@@ -149,12 +149,12 @@ export default function CustomizeOfferPage() {
         <CardContent className="p-6 sm:p-8 space-y-10">
           {/* Suppression de la balise <form> */}
           <div className="space-y-8">
-            {/* Step 1: Tes Vibes & Compagnons */}
+            {/* Step 1: Ta Vibe */}
             {currentStep === 1 && (
               <div className="bg-gradient-to-br from-[#FDFBF6] to-[#00CFC1]/5 p-6 rounded-lg shadow-inner border border-[#00CFC1]/20 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <h2 className="text-2xl font-bold text-[#1C1C3A] mb-6 flex items-center">
                   <Music className="h-6 w-6 mr-3 text-[#FFB800]" />
-                  Tes Vibes & Compagnons
+                  Ta Vibe
                 </h2>
                 {/* Genre Musical */}
                 <div className="mb-6">

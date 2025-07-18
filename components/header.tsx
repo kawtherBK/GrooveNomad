@@ -64,6 +64,7 @@ export function Header() {
             S'inscrire
           </Button>
           </Link>
+          
           <Button
             size="sm"
             variant="outline"

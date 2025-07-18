@@ -6,7 +6,8 @@ import { Badge } from "@/components/ui/badge"
 import { Music, MapPin, Cpu, Sparkles, Users, Star, ArrowRight, Headphones, Plane, Smartphone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { LanguageSelector } from "@/components/language-selector"
+import { PhoneIcon as Whatsapp } from "lucide-react" // Importez l'icône Whatsapp
+
 import { useLanguage } from "@/contexts/language-context"
 import { useTranslation } from "@/lib/i18n"
 import { DebugChatbot } from "@/components/debug-chatbot"
@@ -58,7 +59,7 @@ export function ClientPageWrapper() {
                   {t.heroSubtitle}
                 </p>
               </div>
-             <div className="flex flex-col sm:flex-row gap-4">
+             <div className="flex flex-col sm:flex-row gap-2">
                 <Link href="/register" passHref>
                   <Button
                     size="lg"
@@ -68,13 +69,13 @@ export function ClientPageWrapper() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Button
+                {/* <Button
                   size="lg"
                   variant="outline"
                   className="border-2 border-[#00CFC1] text-[#00CFC1] hover:bg-[#00CFC1]/10 px-8 py-4 text-lg bg-transparent backdrop-blur-sm hover:shadow-xl transition-all duration-300"
                 >
                   {t.watchDemo}
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -326,8 +327,27 @@ export function ClientPageWrapper() {
         <NewsletterSection />
       </main>
 
-      {/* Debug Chatbot
-      <DebugChatbot /> */}
+      {/* Debug Chatbot*/}
+       <Link
+    href="/demo-ai" 
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+      <DebugChatbot /> 
+      </Link>
+
+        {/* WhatsApp Button */}
+      <div className="fixed bottom-6 left-6 z-50">
+  <Link
+    href="https://wa.me/+33759601094" // Remplace ici par ton numéro
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button className="w-16 h-16 rounded-full bg-[#25D366] hover:bg-[#1DA851] shadow-2xl hover:shadow-3xl transition-all duration-300 animate-pulse hover:scale-110 group">
+      <Whatsapp className="h-8 w-8 text-white drop-shadow-lg group-hover:scale-110 transition-transform" />
+    </Button>
+  </Link>
+</div>
 
       {/* Footer */}
      <Footer/>
